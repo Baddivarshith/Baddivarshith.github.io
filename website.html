@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f188dac239.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div class="header">
+         <div class="container">
+            <nav>
+                <img src="bvrlogo.png" alt="logo" class="logo">
+                <ul>
+                    <li><a href="website.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="">Serives</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+          <div class="header-text">
+            <h1>Hi, I am <span>Varshith</span> Reddy</h1>
+           
+            <ul>
+                <li>Data scientist</li>
+                <li>Chemical Engineer</li>
+                <li>Financial analyst</li>
+                
+            </ul>
+           
+            
+             </div>
+   
+      </div>
+<!-- ........about........ -->
+   </div>
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col1">
+              <img src="bigbull.jpg" alt="image not found">
+            </div>
+            <div class="col2">
+                <h1 class="sub-tittle">About Me</h1>
+               <p>I am a data entusiast who is looking to pursue a carrier as a data analyst or consultant with a very good knowledge of financial markets and problem solving skills</p>
+               <div class="tab-tittles">
+                <p class="tab-links active-link"onclick="opentab('skills')">Skills</p>
+                <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                <p class="tab-links"onclick="opentab('education')">Education</p>
+               </div>
+               <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Coding</span> <br> C/C++, Python,SQL</li>
+                    <li><span>Analytical</span> <br> Excel,Pandas,Numpy,Machine learning</li>
+                    <li><span>Visualisation</span> <br> Power BI, Seaborn, Matplotlib</li>
+                </ul>
+               </div>
+               <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>Data analyst <br>
+                        Ardhashastra Intelligence Databases Pvt.Ltd</span> <br> 06/2022-08/2022 | Hyderabad, India
+                        <br>
+                        Gathered stock OHCL data of NIFTY 50 stocks from various
+                        sources and created a Database using SQL.
+                        <br>
+                        Applied DCF model to value Apple Inc company got $220 per
+                        share using MS Excel.
+                        <br>
+                        Time Series Analysis of Walmart Inc.’s Revenue per share
+                        and forecast future growth by regression Analysis.</li>
+                    
+                </ul>
+               </div>
+               <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>UG- Chemical engineering</span> <br> National Institute of technology
+                        04/2020 -present | Warangal, India <br>
+                        <b>CGPA:7.35</b></li>
+                    <li><span>Intermediate</span> <br> Dr.RLR Junior college
+                        06/2017 - 04/2019 | Zaheerabad, India <br>
+                        <b>Percentage: 96.9</b></li>
+                    <li><span>SSC</span> <br> Dr.RLR School
+                        03/2016 -04/2017 | Zaheerabad, India <br>
+                        <b>CGPA :9:00</b>
+                        </li>
+                </ul>
+               </div>
+            </div>
+        </div>
+        
+    </div>
+       
+     </div>
+     <!-- ........projects........ -->
+     <div id="project">
+        <h1> My Projects</h1>
+        <div class="pro1">
+            
+            
+                <span>Backtesting of Trading strategies- Using Python and machine learning</span> <br> 
+                   
+                    <p><b>06/2022 – 08/2022 </b><br>
+                        Developed a Webpage using steamlit which compares
+                        historical returns of various stocks with and without using a
+                        strategy. forecasted the stock prices using regression and
+                        time series analysis.
+                        </p>
+                
+                    <span>Advanced E-commerce website- using HTML, CSS , Javascript</span>
+                    <p>  <b>
+                        06/2021 – 08/2021 <br></b>
+                        Created a full E-commerce website which consists About,login
+                        and contact us pages were user is data collected to a google
+                        sheet.
+                        </p>
+    
+            </div>
+            
+        
+
+     </div>
+
+     <!-- .......contact...........       -->
+     <div id="contact">
+        <div class="row">
+            <div class="contact-left">
+                <h1>Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>varshithregins6666@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+916281178798</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-linkedin-in" ></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+              <a href="" class="btn">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form  name="submit-to-google-sheet">
+                    <input name="Name" type="text" placeholder="your name" required>
+                    <input name="email" type="email" placeholder="Your email" required>
+                    <textarea name="Message"rows="5"placeholder='Your message'></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+         <p>copyright varshith. made by Varshith</p>
+        </div>
+     </div>
+    
+     <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove('active-link');
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+     </script>
+     <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxw3N7aULWvu9fPbHwYRNbOavroo7kDzorxF_ZWJnaVMDHZ2Q9Q6R7o9yza_--e8XaM/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
